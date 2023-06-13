@@ -11,4 +11,4 @@ COPY ./docker_cmd_script.sh   /startup_script
 RUN chmod +x /startup_script/docker_cmd_script.sh
 WORKDIR /app
 CMD ["/startup_script/docker_cmd_script.sh"]
-EXPOSE 4000
+EXPOSE 7000
