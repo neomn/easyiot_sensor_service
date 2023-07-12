@@ -1,0 +1,15 @@
+services:
+  sensor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sensor
+    container_name: sensorc
+    hostname: sensor
+    restart: unless-stopped
+    tty: true
+    volumes:
+      - type: bind
+        source: src
+        target: /app
+    command: ["/startup_script/docker_cmd_script.sh"]
