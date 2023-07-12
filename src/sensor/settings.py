@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-*o%l%1jyh*%s+mq)1s((qnsm)rdd3lwyzl=2n$8g!h)*4*0d7g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+import socket
+ALLOWED_HOSTS = [socket.gethostbyname('sensor')]
 
 
 # Application definition
