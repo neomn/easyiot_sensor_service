@@ -5,7 +5,7 @@ RUN     pip install             Django==4.2.2
 RUN     mkdir                   app
 RUN     mkdir                   startup_script
 COPY    src                     /app
-COPY    nginx/nginx.conf        /etc/nginx/http.d/default.conf
+COPY    nginx/default.conf        /etc/nginx/http.d/default.conf
 COPY    docker_cmd_script.sh    /startup_script
 COPY    nginx/nginx.conf        /etc/nginx/nginx.conf
 RUN     chmod +x                /startup_script/docker_cmd_script.sh
