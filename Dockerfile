@@ -1,6 +1,6 @@
 FROM    python:3.11-alpine
 RUN     apk update
-RUN     apk add                 nginx=1.24.0-r6   uwsgi=2.0.21-r3
+RUN     apk add                 nginx=1.24.0-r6  gcc=12.2.1_git20220924-r10  uwsgi=2.0.21-r3
 RUN     pip install             Django==4.2.2 
 RUN     mkdir                   app
 RUN     mkdir                   startup_script
