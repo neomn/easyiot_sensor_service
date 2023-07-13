@@ -1,7 +1,7 @@
 FROM    python:3.11-alpine
 RUN     apk update
 RUN     apk add                 nginx=1.24.0-r6  build-base=0.5-r3 
-RUN     pip install               Django==4.2.2 
+RUN     pip install             uwsgi==2.0.21  Django==4.2.2 
 RUN     mkdir                   app
 RUN     mkdir                   startup_script
 COPY    src                     /app
