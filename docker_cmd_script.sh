@@ -1,3 +1,3 @@
 #!/bin/sh
 nginx 
-uwsgi --ini uwsgi.ini
+gunicorn -w 4 sensor.wsgi
