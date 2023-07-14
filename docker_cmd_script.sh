@@ -1,4 +1,4 @@
 #!/bin/sh
-rm -r my
+rm -r myproject
 nginx 
-gunicorn -w 4 sensor.wsgip
+gunicorn sensor.wsgip
